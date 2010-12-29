@@ -1,4 +1,4 @@
-" An example vimrc made for use on multiple machines.
+" A vim config made for use on multiple machines.
 "
 " Maintainer:	Michael Jablecki
 " Last change:	2010 Dec 28
@@ -8,6 +8,10 @@
 "	      for Amiga:  s:.vimrc
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
+
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages available in Debian.
+runtime! debian.vim
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -27,8 +31,8 @@ else
   set backup		" keep a backup file
 endif
 set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set ruler		    " show the cursor position all the time
+set showcmd		    " display incomplete commands
 set incsearch		" do incremental searching
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
@@ -51,11 +55,19 @@ endif
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+  " Map f3 to toggle
+    nnoremap <F3> :set hlsearch!<CR>
 endif
+
+" For ctags
+    set tags=tags;/
+
+" If using a dark background within the editing area and syntax highlighting
+" turn on this option as well
+" set background=dark
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
@@ -78,56 +90,46 @@ if has("autocmd")
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
   augroup END
-
 else
-
   set autoindent		" always set autoindenting on
-
 endif " has("autocmd")
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
 
-" My additions
-set nocompatible
-set number
-set showcmd
+" My Editor/Codestyle Settings
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set number
+"set ignorecase
 
-set t_Co=8
-
-" Select colormap: 'soft', 'softlight', 'standard' or 'allblue'
-"   let xterm16_colormap    = 'standard'
-
- " Select brightness: 'low', 'med', 'high', 'default' or custom levels.
-"   let xterm16_brightness  = 'low'
-
+" Simple colorscheme
 colorscheme ir_black
 
 " ESC T shortcut to open NERDTree
- function OpenNERDTree()
-   execute ":NERDTree"
-   endfunction
-   command -nargs=0 OpenNERDTree :call OpenNERDTree()
-   nmap <ESC>n :OpenNERDTree<CR>
+function OpenNERDTree()
+    execute ":NERDTree"
+endfunction
+command -nargs=0 OpenNERDTree :call OpenNERDTree()
+nmap <ESC>n :OpenNERDTree<CR>
 
- "colorscheme lucius
-
-" My expansions
-"
+" My Abbreviations
 iab phpdef <?php <CR><CR>?><Up>
 iab phpequal <?= ?><Left><Left><Left>
 
+" Put a file 'vimrc_local' in home directory
+" add things such as:
+" set t_Co=256 " set t_Co=16
+" colorscheme lucuis
+" And custom abbreviations
 if filereadable($HOME.'/vimrc_local')
     source $HOME/vimrc_local
 endif
