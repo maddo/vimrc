@@ -1,0 +1,16 @@
+Maddo's Vim SEttings
+--------------------
+
+You can clone this git, or copy and paste the vimrc elements that you
+like most into your own.
+
+If you clone it, you can use symbolic links to keep it updated.
+    ln -s /path/to/.vimrc ~/.vimrc
+Make sure you backup your current vimrc first.
+
+Create your custom settings in
+    ~/vimrc_local
+It will be automatically loaded by this vimrc.  Settings in the 
+vimrc_local file should override the ones in the .vimrc
+
+
