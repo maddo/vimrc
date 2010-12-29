@@ -111,8 +111,10 @@ set smartindent
 set number
 "set ignorecase
 
-" Simple colorscheme
+" Simple colorscheme for a fallback default with 8 color term
+set t_Co=8
 colorscheme ir_black
+" nice alternatives: dante, desert, ekvoli, ir_black, ironman, oceandeep
 
 " ESC T shortcut to open NERDTree
 function OpenNERDTree()
