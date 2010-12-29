@@ -126,7 +126,7 @@ nmap <F7> :NERDTreeToggle<CR>
 " nmap <S-F7> :NERDTreeClose<CR>
 "
 " " Store the bookmarks file in perforce
- let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
+"  let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
 "
 " " Show the bookmarks table on startup
  let NERDTreeShowBookmarks=1
