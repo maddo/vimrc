@@ -143,6 +143,8 @@ nmap <F7> :NERDTreeToggle<CR>
              \ '\.intermediate\.manifest$',
              \ '^mt.dep$', 'messages', '\.git' ]
 
+:autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
+
 " My Abbreviations
 iab phpdef <?php <CR><CR>?><Up>
 iab phpequal <?= ?><Left><Left><Left>
