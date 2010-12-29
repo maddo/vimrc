@@ -117,6 +117,11 @@ colorscheme ir_black
 " nice alternatives: dante, desert, ekvoli, ir_black, ironman, oceandeep
 
 "-----------------------------------------------------------------------------
+"" TagList Plugin Settings
+"-----------------------------------------------------------------------------
+nnoremap <silent> <F8> :TlistToggle<CR>
+
+"-----------------------------------------------------------------------------
 "" NERD Tree Plugin Settings
 "-----------------------------------------------------------------------------
 "" Toggle the NERD Tree on an off with F7
