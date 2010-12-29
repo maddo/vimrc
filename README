@@ -1,16 +1,27 @@
-Maddo's Vim SEttings
+Maddo's Vim Settings
 --------------------
 
-You can clone this git, or copy and paste the vimrc elements that you
-like most into your own.
+To use this configuration exactly as it is (in win/mac), clone it into 
+~/.vim (backup your current .vim if it exists).
 
-If you clone it, you can use symbolic links to keep it updated.
-    ln -s /path/to/.vimrc ~/.vimrc
-Make sure you backup your current vimrc first.
+Create a link for the .vimrc file, something like this:
+cd ~
+ln -s .vim/.vimrc .vimrc
 
-Create your custom settings in
-    ~/vimrc_local
-It will be automatically loaded by this vimrc.  Settings in the 
-vimrc_local file should override the ones in the .vimrc
+And create a file for local customizations
+touch ~/vimrc_local
 
+The git contains several plugins ready to go:
+-NERDTree
+-ScrollColor
+-assistant
+-debugger
+(This list may change or grow over time)
 
+Otherwise, browse the files and pick and choose useful elements.
+
+Mac users:
+If not already configured, there's a tweak for git to help with line 
+ending issues.
+
+git config --global core.autocrlf input
