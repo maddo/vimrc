@@ -56,8 +56,12 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
   " Map f3 to toggle
-    nnoremap <F3> :set hlsearch!<CR>
+    nnoremap <F4> :set hlsearch!<CR>
 endif
+
+" Tab cycyling
+nnoremap <F2> :tabprev<CR>
+nnoremap <F3> :tabnext<CR>
 
 " For ctags
     set tags=tags;/
@@ -121,6 +125,11 @@ colorscheme ir_black
 "" TagList Plugin Settings
 "-----------------------------------------------------------------------------
 nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Use_Right_Window=1 
+let Tlist_Enable_Fold_Column=0 
+let Tlist_Show_One_File=1   " especially with this one 
+let Tlist_Compact_Format=1 
+set updatetime=1000 
 
 "-----------------------------------------------------------------------------
 "" NERD Tree Plugin Settings
