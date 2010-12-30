@@ -55,16 +55,19 @@ endif
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
-  " Map f3 to toggle
+  " Map f4 to toggle
     nnoremap <F4> :set hlsearch!<CR>
 endif
 
 " Tab cycyling
-nnoremap <F2> :tabprev<CR>
-nnoremap <F3> :tabnext<CR>
+noremap th :tabprev<CR>
+noremap tl :tabnext<CR>
+noremap te :tabedit<CR>
+noremap tn :tabedit<CR>
+noremap tq :tabclose<CR>
 
 " For ctags
-    set tags=tags;/
+    "set tags=tags;/
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
