@@ -59,6 +59,9 @@ if &t_Co > 2 || has("gui_running")
     nnoremap <F4> :set hlsearch!<CR>
 endif
 
+" Remap :W to :w (train the rifle, instead of the cowboy)
+command W :w
+
 " Tab cycyling
 noremap th :tabprev<CR>
 noremap tl :tabnext<CR>
