@@ -121,6 +121,7 @@ set expandtab
 set smartindent
 set number
 "set ignorecase
+let mapleader = ","
 
 " Simple colorscheme for a fallback default with 8 color term
 set t_Co=8
@@ -160,6 +161,10 @@ nmap <F7> :NERDTreeToggle<CR>
              \ '^mt.dep$', 'messages', '\.git' ]
 
 :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
+
+
+" Set default shell
+" set shell '/bin/sh'
 
 " My Abbreviations
 iab phpdef <?php <CR><CR>?><Up>
