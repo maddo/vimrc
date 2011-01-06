@@ -120,6 +120,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set number
+let autoread=1
 "set ignorecase
 let mapleader = ","
 
@@ -144,16 +145,10 @@ set updatetime=1000
 "" Toggle the NERD Tree on an off with F7
 nmap <F7> :NERDTreeToggle<CR>
 
-" Close the NERD Tree with Shift-F7
-" nmap <S-F7> :NERDTreeClose<CR>
-"
-" " Store the bookmarks file in perforce
-"  let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
-"
-" " Show the bookmarks table on startup
+" Show the bookmarks table on startup
  let NERDTreeShowBookmarks=1
-"
-" " Don't display these kinds of files
+
+" Don't display these kinds of files
  let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
              \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
              \ '\.embed\.manifest$', '\.embed\.manifest.res$',
@@ -162,9 +157,11 @@ nmap <F7> :NERDTreeToggle<CR>
 
 :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
 
-
-" Set default shell
-" set shell '/bin/sh'
+"----------------------------------------------------------------------------
+"" git.vim Plugin Settings
+"----------------------------------------------------------------------------
+set laststatus=2
+set statusline=%{GitBranch()}
 
 " My Abbreviations
 iab phpdef <?php <CR><CR>?><Up>
