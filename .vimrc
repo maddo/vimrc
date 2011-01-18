@@ -63,11 +63,11 @@ endif
 command W :w
 
 " Tab cycyling
-noremap th :tabprev<CR>
-noremap tl :tabnext<CR>
-noremap te :tabedit<CR>
-noremap tn :tabedit<CR>
-noremap tq :tabclose<CR>
+nnoremap th :tabprev<CR>
+nnoremap tl :tabnext<CR>
+nnoremap te :tabedit<CR>
+nnoremap tn :tabedit<CR>
+nnoremap tq :tabclose<CR>
 
 " For ctags
     "set tags=tags;/
@@ -153,7 +153,13 @@ nmap <F7> :NERDTreeToggle<CR>
              \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
              \ '\.embed\.manifest$', '\.embed\.manifest.res$',
              \ '\.intermediate\.manifest$',
-             \ '^mt.dep$', 'messages', '\.git' ]
+             \ '^mt.dep$', 'messages', '\.git', '\~$', 
+             \ 'jseditor', 'imagenes', 'images', 'fliqz', 'do_not_delete', 
+             \ 'campaigns', 'attachments', 'backgroundProcess', 'nbproject', 
+             \ 'phpmailer', 'plesk-stat', 'scopbin', 'videoegg', 'vote', 
+             \ 'themes', 'sitemaps', 'summary', 'picture_library', 'tests', 
+             \ 'error', 'errorpages', 'branches', 'include', 'w3c', 
+             \ 'warnings', 'partner_keys', 'posting', 'fonts', 'help', 'bids' ]
 
 :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
 
