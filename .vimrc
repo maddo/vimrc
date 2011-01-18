@@ -166,8 +166,8 @@ nmap <F7> :NERDTreeToggle<CR>
 "----------------------------------------------------------------------------
 "" git.vim Plugin Settings
 "----------------------------------------------------------------------------
-set laststatus=2
-set statusline=%{GitBranch()}
+" set laststatus=2
+" set statusline=%{GitBranch()}
 
 " My Abbreviations
 iab phpdef <?php <CR><CR>?><Up>
