@@ -118,7 +118,7 @@ endif
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set smartindent
+"set smartindent
 set number
 let autoread=1
 "set ignorecase
@@ -153,15 +153,16 @@ nmap <F7> :NERDTreeToggle<CR>
              \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
              \ '\.embed\.manifest$', '\.embed\.manifest.res$',
              \ '\.intermediate\.manifest$',
-             \ '^mt.dep$', 'messages', '\.git', '\~$', 
+             \ '^mt.dep$', '\.git', '\~$', 
              \ 'jseditor', 'imagenes', 'images', 'fliqz', 'do_not_delete', 
              \ 'campaigns', 'attachments', 'backgroundProcess', 'nbproject', 
              \ 'phpmailer', 'plesk-stat', 'scopbin', 'videoegg', 'vote', 
              \ 'themes', 'sitemaps', 'summary', 'picture_library', 'tests', 
              \ 'error', 'errorpages', 'branches', 'include', 'w3c', 
-             \ 'warnings', 'partner_keys', 'posting', 'fonts', 'help', 'bids' ]
+             \ 'warnings', 'partner_keys', 'posting', 'fonts', 'help', 'bids',
+             \ 'post', 'feeds', 'ext', 'configuration' ]
 
-:autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
+" :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
 
 "----------------------------------------------------------------------------
 "" git.vim Plugin Settings
@@ -172,7 +173,7 @@ nmap <F7> :NERDTreeToggle<CR>
 " My Abbreviations
 iab phpdef <?php <CR><CR>?><Up>
 iab phpequal <?= ?><Left><Left><Left>
-
+iab mssg Messages::get('')<Left><Left> 
 " Put a file 'vimrc_local' in home directory
 " add things such as:
 " set t_Co=256 " set t_Co=16
