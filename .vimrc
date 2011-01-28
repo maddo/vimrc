@@ -165,8 +165,7 @@ nmap <F7> :NERDTreeToggle<CR>
              \ 'themes', 'sitemaps', 'summary', 'picture_library', 'tests', 
              \ 'error', 'errorpages', 'branches', 'include', 'w3c', 
              \ 'warnings', 'partner_keys', 'posting', 'fonts', 'help', 'bids',
-             \ 'post', 'feeds', 'ext', 'configuration' ]
-             \ '\.pyc$' ]
+             \ 'post', 'feeds', 'ext', 'configuration', '\.pyc$' ]
 
 " :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
 
