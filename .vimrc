@@ -159,7 +159,7 @@ nmap <F7> :NERDTreeToggle<CR>
              \ 'phpmailer', 'plesk-stat', 'scopbin', 'videoegg', 'vote', 
              \ 'themes', 'sitemaps', 'summary', 'picture_library', 'tests', 
              \ 'error', 'errorpages', 'branches', 'include', 'w3c', 
-             \ 'warnings', 'partner_keys', 'posting', 'fonts', 'help', 'bids',
+             \ 'warnings', 'partner_keys', 'fonts', 'help', 'bids',
              \ 'post', 'feeds', 'ext', 'configuration' ]
 
 " :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
