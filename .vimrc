@@ -103,7 +103,7 @@ if has("autocmd")
     \ endif
   augroup END
 else
-  set autoindent		" always set autoindenting on
+"  set autoindent		" always set autoindenting on
 endif " has("autocmd")
 
 " Convenient command to see the difference between the current buffer and the
@@ -128,6 +128,11 @@ let mapleader = ","
 set t_Co=8
 colorscheme ir_black
 " nice alternatives: dante, desert, ekvoli, ir_black, ironman, oceandeep
+
+"-----------------------------------------------------------------------------
+"" Fuf Plugin Settings
+"-----------------------------------------------------------------------------
+nmap <C-f> :FufCoverageFile<CR>
 
 "-----------------------------------------------------------------------------
 "" TagList Plugin Settings
@@ -160,7 +165,7 @@ nmap <F7> :NERDTreeToggle<CR>
              \ 'themes', 'sitemaps', 'summary', 'picture_library', 'tests', 
              \ 'error', 'errorpages', 'branches', 'include', 'w3c', 
              \ 'warnings', 'partner_keys', 'fonts', 'help', 'bids',
-             \ 'post', 'feeds', 'ext', 'configuration' ]
+             \ 'post', 'feeds', 'ext', 'configuration', '\.pyc$' ]
 
 " :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
 
@@ -174,6 +179,8 @@ nmap <F7> :NERDTreeToggle<CR>
 iab phpdef <?php <CR><CR>?><Up>
 iab phpequal <?= ?><Left><Left><Left>
 iab mssg Messages::get('')<Left><Left> 
+iab brh (BaseRequestHandler)
+
 " Put a file 'vimrc_local' in home directory
 " add things such as:
 " set t_Co=256 " set t_Co=16
