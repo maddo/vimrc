@@ -56,6 +56,8 @@ endif
 
 " Remap :W to :w (train the rifle, instead of the cowboy)
 command W :w
+" Remap :Q to :q (train the rifle, instead of the cowboy)
+command Q :q
 
 " Tab cycyling
 nnoremap th :tabprev<CR>
@@ -158,9 +160,9 @@ nmap <F7> :NERDTreeToggle<CR>
              \ 'campaigns', 'attachments', 'backgroundProcess', 'nbproject', 
              \ 'phpmailer', 'plesk-stat', 'scopbin', 'videoegg', 'vote', 
              \ 'themes', 'sitemaps', 'summary', 'picture_library', 'tests', 
-             \ 'error', 'errorpages', 'branches', 'include', 'w3c', 
-             \ 'warnings', 'partner_keys', 'fonts', 'help', 'bids',
-             \ 'post', 'feeds', 'ext', 'configuration', '\.pyc$' ]
+             \ 'error', 'errorpages', 'branches', 'w3c', 
+             \ 'warnings', 'partner_keys', 'fonts', '^help$', 'bids',
+             \ '^post$', 'feeds', 'configuration', '\.pyc$' ]
 
 " :autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>' . &l:textwidth . 'v.\+', -1)
 
