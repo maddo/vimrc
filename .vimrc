@@ -186,3 +186,5 @@ iab brh (BaseRequestHandler)
 if filereadable($HOME.'/vimrc_local')
     source $HOME/vimrc_local
 endif
+
+command Sudow :w !sudo tee %
