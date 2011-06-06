@@ -67,7 +67,7 @@ nnoremap tn :tabedit<CR>
 nnoremap tq :tabclose<CR>
 
 " For ctags
-    "set tags=tags;/
+    set tags=tags;/
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -186,3 +186,6 @@ iab brh (BaseRequestHandler)
 if filereadable($HOME.'/vimrc_local')
     source $HOME/vimrc_local
 endif
+
+filetype plugin on
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
